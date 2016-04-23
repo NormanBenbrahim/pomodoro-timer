@@ -1,44 +1,44 @@
 body {
   background-color: #ffb3b3;
-	padding-top: 10px;
+  padding-top: 10px;
 }
 
 /* the whole pomodoro object*/
 #entire-object {
-	border-bottom: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 /*the animated hourglass object*/
 .hourglass {
-	background: url('http://www.outworldz.com/SeamlessTextures/master/Torley%20Textures/Torley.com%20%5BGLASS%5D%20First.png%20by%20the%20one%20and%20only%20Torley%20(CC-BY).png') no-repeat center center fixed;
-	background-size: cover;
-	width: 200px;
-	height: 200px;
-	border-radius: 100% ;
-	border: 1px solid #4d2600;
+  background: url('http://www.outworldz.com/SeamlessTextures/master/Torley%20Textures/Torley.com%20%5BGLASS%5D%20First.png%20by%20the%20one%20and%20only%20Torley%20(CC-BY).png') no-repeat center center fixed;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 100% ;
+  border: 1px solid #4d2600;
 }
 
 /* the slider to pick pomodoro time */
 .pomodoro {
-	max-width: 20%;
+  max-width: 20%;
 }
 
 /* the slider to pick the break time */
 .break {
-	max-width: 20%;
+  max-width: 20%;
 }
 
 .number-pomodoros {
-	max-width: 20%;
+  max-width: 20%;
 }
 
 #number-pomodoros {
-	max-width: 20%;
+  max-width: 20%;
 }
 
 .tomato {
-	width: 60px;
-	height:70px
+  width: 60px;
+  height:70px
 }
 
 
