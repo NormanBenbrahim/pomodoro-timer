@@ -1,4 +1,40 @@
-var pomodoro = document.getElementById("pomodoro"); // total pomodoro time
+// for decimal rounding, taken from the MDN website on Math.round. i only need Math.floor10
+// Closure
+(function() {
+  /**
+   * Decimal adjustment of a number.
+   *
+   * @param {String}  type  The type of adjustment.
+   * @param {Number}  value The number.
+   * @param {Integer} exp   The exponent (the 10 logarithm of the adjustment base).
+   * @returns {Number} The adjusted value.
+   */
+  function decimalAdjust(type, value, exp) {
+    // If the exp is undefined or zero...
+    if (typeof exp === 'undefined' || +exp === 0) {
+      return Math[type](value);
+    }
+    value = +value;
+    exp = +exp;
+    // If the value is not a number or the exp is not an integer...
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
+      return NaN;
+    }
+    // Shift
+    value = value.toString().split('e');
+    value = Math[type](+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
+    // Shift back
+    value = value.toString().split('e');
+    return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
+  }
+  // Decimal floor
+  if (!Math.floor10) {
+    Math.floor10 = function(value, exp) {
+      return decimalAdjust('floor', value, exp);
+    };
+  }
+})();
+
 
 // create stopwatch class 
 var	CountDown = function(timePoint) {
@@ -35,12 +71,16 @@ var	CountDown = function(timePoint) {
 	this.time = function() {
 		var lap = lapTime + (startAt ? now() - startAt : 0); 
 		t = timePoint - lap; //countdown the time
-		t = t/(60*1000); // convert to minutes
+		t = Math.floor10(t/(60*1000), -2); // convert to minutes
 		return t;
 	};
 };
 
-
+// convert the time from decimal to X:Y format
+function convertTime(t) {
+	t = t.toString().split('.');
+	return t[0] + ':' + t[1];
+}
 
 // handle events
 
