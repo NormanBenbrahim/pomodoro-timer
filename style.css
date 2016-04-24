@@ -5,7 +5,7 @@ body {
 
 /* the whole pomodoro object*/
 #entire-object {
-  border-bottom: 2px solid black;
+  /*border-bottom: 2px solid black;*/
 }
 
 /*the animated hourglass object*/
@@ -15,17 +15,17 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 100% ;
-  border: 1px solid #4d2600;
+  border: 6px solid #4d2600;
 }
 
 /* the slider to pick pomodoro time */
 .pomodoro {
-  max-width: 20%;
+  max-width: 200px;
 }
 
 /* the slider to pick the break time */
 .break {
-  max-width: 20%;
+  max-width: 200px;
 }
 
 .number-pomodoros {
@@ -33,13 +33,18 @@ body {
 }
 
 #number-pomodoros {
-  max-width: 20%;
+  max-width: 140px;
 }
 
 .tomato {
   width: 60px;
   height:70px
 }
+
+span {
+  transition: 1s ease;
+}
+
 
 
 /* Got this straight from CSS Tricks website
