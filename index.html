@@ -23,17 +23,17 @@
 				
 				<div id="entire-object center-block">
 					
-					<div class="title">Pomodoro Clock</div>
+					<div class="title" id="title">Pomodoro Clock</div>
 					
 					<div class="hourglass" id="hourglass"></div>
 					
-					<div class="timer"><span id="timer"></span> &nbsp; <span id="breaker"></span></div>
+					<div class="timer"> </div>
 					
-					<div class="status"><a href="#" id="start"><i class="fa fa-play" id="play-pause"></i></a>  <a href="#" id="pause"><i class="fa fa-pause" id="stop"></i></a> <a href="#" id="stop"><i class="fa fa-stop" id="stop"></i></a> </div>
+					<div class="status"><a href="#"><i  id="start" onclick="start();" class="fa fa-play"></i></a>  &nbsp; <a href="#"><i class="fa fa-stop" id="stop"></i></a> &nbsp; <a href="#"><i  id="reset" onclick="reset();" class="fa fa-rotate-left"></i></a></div>
 					
-					<div class="pomodoro text-center" style="border-bottom: 1px solid black">Pomodoro Length<input type="range" min="25" max="90" step="1" value="25" id="pomodoro"></input></div>
+					<div class="pomodoro text-center" style="border-bottom: 1px solid black">Pomodoro Length<br> <span id="timer"></span> <input type="range" min="25" max="90" step="1" value="25" id="pomodoro"></input>  </div>
 					
-					<div class="break text-center" style="border-bottom: 1px solid black">Break Length<input type="range" min="5" max="15" value="5" step="1" id="break"></div>
+					<div class="break text-center" style="border-bottom: 1px solid black">Break Length<br> <span id="breaker"></span> <input type="range" min="5" max="15" value="5" step="1" id="break"> </div>
 					
 					<div class="number-pomodoros">How Many Pomodoros? <input type="number" name="points" step="1" value="1" id="number-pomodoros" placeholder="1" min="1" max="150"></div>			
 					<div><span style="font-size: 34px; font-family: serif;">I</span>  <img class="tomato" src="http://nobacks.com/wp-content/uploads/2014/11/Tomato-68-449x500.png">  <span style="font-size: 34px; font-family: serif;">JavaScript</span></div>
